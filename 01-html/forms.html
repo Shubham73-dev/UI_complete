@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- login, register, search, post, comment -->
+    <h1>Forms</h1>
+
+    <!-- method - get & post -->
+    <form action="login.html" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="username">Enter Name</label>
+                </td>
+                <td>
+                    <input type="text" id="username" name="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pwd">Enter Password</label>
+                </td>
+                <td>
+                    <input type="password" id="pwd" name="userpwd">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="country">Select Country</label>
+                </td>
+                <td>
+                    <select id="country" name="country">
+                        <option value="in">India</option>
+                        <option value="ch">China</option>
+                        <option value="en">England</option>
+                        <option value="aus">Australia</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Gender</td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="m"> 
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="f">
+                    <label for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Sports</td>
+                <td>
+                    <input type="checkbox" value="cricket"> Cricket
+                    <input type="checkbox" value="soccer"> Soccer
+                    <input type="checkbox" value="tennis"> Tennis
+                    <input type="checkbox" value="hockey"> Hockey
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
