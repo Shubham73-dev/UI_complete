@@ -1,0 +1,9 @@
+/* CSS Basic Syntax
+h2 - selector
+{} - expression
+color : property
+red   : value */
+
+h2 {
+    color: red !important;
+}
