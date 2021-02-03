@@ -1,0 +1,31 @@
+body {
+    margin: 0px;
+    background-image: url("https://image.cnbcfm.com/api/v1/image/103135046-GettyImages-110022758.jpg?v=1446585058");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+div {
+    height: 620px;
+    background-size: 100% 100%;
+    margin-bottom: 600px;
+    background-attachment: fixed;
+}
+
+#div_1 {
+    background-image: url("https://images.news18.com/ibnlive/uploads/2020/09/1600850841_lazman-tendulkar.jpg");
+}
+#div_2 {
+    background-image: url("https://anokhefacts.com/wp-content/uploads/2020/11/Sachin_Tendulkar.jpeg");
+}
+
+#div_3 {
+    background-image: url("https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/03/31/900012-sachin-tendulkar.jpg");
+}
+
+#div_4 {
+    background-image: url("https://www.cricket22yard.com/wp-content/uploads/2019/10/Sachin-Tendulkar.jpg");
+}
+#div_5 {
+    background-image: url("https://www.businessupturn.com/wp-content/uploads/2020/04/Happy-Birthday-Sachin-Tendulkar.jpg");
+}
