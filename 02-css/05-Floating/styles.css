@@ -1,0 +1,31 @@
+* {
+    /* margin: 0px; */
+}
+.col {
+
+}
+
+.col-1 {
+    background-color: lightblue;
+    width: 40%;
+    float: left;
+}
+.col-2 {
+    background-color: lightgray;
+    float: right;
+    width: 40%;
+}
+
+.row {
+    /* background-color: lightsalmon; */
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+.col-3 {
+    background-color: lightskyblue;
+}
