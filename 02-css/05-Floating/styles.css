@@ -1,6 +1,15 @@
 * {
     /* margin: 0px; */
 }
+
+/* Pseudo Elements - after and before */
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
 .col {
 
 }
@@ -22,9 +31,9 @@
     padding: 10px;
 }
 
-.clear {
+/* .clear {
     clear: both;
-}
+} */
 
 .col-3 {
     background-color: lightskyblue;
