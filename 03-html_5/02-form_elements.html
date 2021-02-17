@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Form Elements</h1>
+    <form action="#">
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Enter your name</label>
+                </td>
+                <td>
+                    <input type="text" id="name" placeholder="Enter your name" required value="ram" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="pwd">Enter your password</label>
+                </td>
+                <td>
+                    <input type="text" id="pwd" placeholder="Enter your password" value="1234" required readonly>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your mail</td>
+                <td>
+                    <input type="email" placeholder="Enter your mail id" autofocus autocomplete="off">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your age</td>
+                <td>
+                    <input type="number" min="18" max="50">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter DOB</td>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Time</td>
+                <td>
+                    <input type="time">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter DOB</td>
+                <td>
+                    <input type="datetime-local">
+                </td>
+            </tr>
+            <tr>
+                <td>Select range</td>
+                <td>
+                    <input type="range" value="100" min="100" max="1000" step="10" onchange="op.value = value">
+                </td>
+                <td>
+                    <output id="op">100</output>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter URL
+                </td>
+                <td>
+                    <input type="url" placeholder="Enter URL">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter card pattern</td>
+                <td>
+                    <input type="text" placeholder="Enter card pattern" pattern="[a-z]{3}[0-9]{2}[!@#$%^&*]{1}[A-Z]{1}" title="Please Enter 3 small case letters, 2 digits, 1 special symbol, 1 Upper case letter">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter mobile num</td>
+                <td>
+                    <input type="text" placeholder="Enter mobile number" pattern="[0-9]{10}" maxlength="10">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your comment</td>
+                <td>
+                    <textarea cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="reset">
+                </td>
+                <td>
+                    <input type="submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>
