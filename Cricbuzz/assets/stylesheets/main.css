@@ -1,0 +1,123 @@
+/* Global CSS */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Helper Classes */
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+#container {
+    background-color: #E3E6E3;
+    padding: 10px 0px 0px;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+/* 
+screen = 1200px
+width = 960px
+avail = 1200 - 960 = 240
+margin-left = 120
+margin-right = 120 
+*/
+
+/* Generic CSS */
+#header {
+    background-color: #009270;
+}
+#header .logo a {
+    padding: 6px;
+    display: block;
+}
+
+#main-navigation {
+
+}
+#main-navigation a {
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    padding: 16px 10px;
+}
+#main-navigation ul li {
+    display: inline-block;
+}
+#main-navigation ul li a:hover {
+    background-color: #028062;
+}
+#main-navigation ul li.dropdown-menu {
+    position: relative;
+}
+#main-navigation ul li.dropdown-menu:after {
+    content: "";
+    border: 5px solid;
+    position: absolute;
+    top: 22px;
+    right: -2px;
+    /* top right+left bottom */
+    border-color: white transparent transparent;
+}
+
+#search {
+    width: 18%;
+    position: relative;
+    margin-top: 8px;
+    margin-right: 6px;
+}
+#search input[type="text"] {
+    height: 30px;
+    width: 80%;
+    background-color: #00785C;
+    color: #fff;
+    padding-left: 25px;
+    border: 1px solid #00785C;
+}
+#search .search-btn {
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+#banner {
+
+}
+
+#footer {
+
+}
+
+
+/* Specific CSS */
