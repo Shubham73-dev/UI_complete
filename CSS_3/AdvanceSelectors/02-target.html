@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #login {
+            display: none;
+            /* visibility: hidden; */
+        }
+        #login:target {
+            display: block;
+            /* visibility: visible; */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Target Selector</h1>
+
+    <a href="#login">Login Form</a>
+    <hr>
+    <div id="login">
+        <form action="#">
+            <table>
+                <tr>
+                    <td>Enter Email</td>
+                    <td>
+                        <input type="email" placeholder="Enter email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enter Password</td>
+                    <td>
+                        <input type="password" placeholder="Enter password">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="reset">
+                    </td>
+                    <td>
+                        <input type="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+    <div>
+        <h2>This is section_1</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, labore alias neque nesciunt sapiente consequatur officia dolores quod mollitia perferendis, ipsum ad hic iste suscipit porro deleniti aspernatur odit omnis!
+        </p>
+    </div>
+    
+</body>
+</html>
