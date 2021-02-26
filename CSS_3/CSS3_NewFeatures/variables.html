@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --primary-color : #e0e0e0;
+            --title-color : #0c1e9e;
+            --fallback-color : red;
+            --fallback-2 : green;
+        }
+        body {
+            background-color: var(--primary-color);
+        }
+        h1 {
+            color: var(--title-color);
+        }
+        h2 {
+            /* color: var(--title-color, --fallback-color); */
+            color: var(--title-color, var(--fallback-color, --fallback-2));
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS 3 Variables</h1>
+
+    <h2>This is a heading</h2>
+    <h2>This is a heading</h2>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur cum culpa repellat nesciunt voluptate tempora, corrupti ullam nam vero perferendis exercitationem? Rem illo accusantium voluptatem nihil doloremque voluptates quae quam!
+    </p>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure consectetur sed tenetur, minus in fugit dolor voluptatem iusto, exercitationem, distinctio beatae corporis. Esse fuga error eaque praesentium mollitia veniam voluptates.
+    </p>
+    
+</body>
+</html>
