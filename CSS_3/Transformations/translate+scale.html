@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+        }
+        #banner {
+            position: relative;
+        }
+        .mid {
+            position: absolute;
+            z-index: -1;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            transform: scale(0,0);
+            transform-origin: top;
+            transition: 3s;
+        }
+        .left, .right {
+            display: inline-block;
+            width: 49.8%;
+            height: 400px;
+            transition: 3s;
+        }
+        img {
+            height: inherit;
+        }
+        #banner:hover .left {
+            transform: translateX(-110%);
+        }
+        #banner:hover .right {
+            transform: translateX(110%);
+        }
+        #banner:hover .mid {
+            transform: scale(1,1);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="banner">
+        <div class="left">
+            <img src="https://img.fifa.com/image/upload/t_l4/nw5w9s5aj2quebt6hp8x.jpg" alt="">
+        </div>
+        <div class="mid">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Football_%28soccer_ball%29.svg/1200px-Football_%28soccer_ball%29.svg.png" alt="">
+        </div>
+        <div class="right">
+            <img src="https://www.businessinsider.in/photo/77825377/Lionel-Messi-leaving-Barcelona-would-be-the-biggest-and-most-shocking-transfer-in-football-history-but-it-would-make-perfect-sense-for-everyone.jpg?imgsize=330710" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>

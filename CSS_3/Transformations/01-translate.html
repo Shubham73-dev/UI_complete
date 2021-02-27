@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div_1 {
+            border: 1px solid red;
+        }
+        img {
+            transition-duration: 10s;
+        }
+        #div_1:hover img {
+            /* transform: translateX(1000px); */
+            /* transform: translateY(100px); */
+            transform: translate(1000px, 100px);
+        }
+        #div_2 {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            border: 10px solid red;
+            overflow: hidden;
+        }
+        #div_2 img {
+            width: 100%;
+            height: inherit;
+            transform: translateX(-100%);
+            transition-duration: 5s;
+        }
+        #div_2:hover img {
+            transform: translateX(0%);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Transform Translate</h1>
+
+    <div id="div_1">
+        <img src="../../images/hulk5-18463.gif" alt="">
+    </div>
+
+    <div id="div_2">
+        <img src="https://st2.cricketcountry.com/wp-content/uploads/cricket/image_20131015131036.jpg" alt="">
+    </div>
+    
+</body>
+</html>

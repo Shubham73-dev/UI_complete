@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div_2 {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            border: 10px solid red;
+            /* overflow: hidden; */
+            perspective: 700px;
+        }
+        #div_2 img {
+            width: 100%;
+            height: inherit;
+            transform-origin: left;
+            transition-duration: 5s;
+        }
+        #div_2:hover img {
+            /* transform: rotateX(180deg); */
+            /* transform: rotateY(360deg) scale(2,2); */
+            /* transform: rotate(360deg); */
+            transform: rotateY(-180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Transform rotate</h1>
+
+    <div id="div_2">
+        <img src="https://st2.cricketcountry.com/wp-content/uploads/cricket/image_20131015131036.jpg" alt="">
+    </div>
+    
+</body>
+</html>
