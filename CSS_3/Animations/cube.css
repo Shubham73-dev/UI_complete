@@ -3,6 +3,10 @@
     height: 300px;
     width: 300px;
     position: relative;
+    transition: 10s;
+    /* perspective: 400px; */
+    transform-style: preserve-3d;
+    animation: cube 10s infinite linear;
 }
 #cube > div {
     height: 300px;
@@ -11,5 +15,40 @@
     color: #fff;
     font-size: 50px;
     text-align: center;
+    border: 2px solid red;
     position: absolute;
+}
+
+#left {
+    transform: rotateY(90deg);
+    transform-origin: left;
+}
+
+#right {
+    transform: rotateY(-90deg);
+    transform-origin: right;
+}
+
+#top {
+    transform: rotateX(-90deg);
+    transform-origin: top;
+}
+
+#bottom {
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
+#back {
+    z-index: -1;
+    transform: translateZ(-300px);
+}
+
+@keyframes cube{
+    from {
+        transform: rotate3d(0,0,0,0deg);
+    }
+    to {
+        transform: rotate3d(1,1,1,360deg);
+    }
 }
