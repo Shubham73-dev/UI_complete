@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent {
+            column-count: 4;
+            column-gap: 70px;
+            column-rule: 2px solid red;
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 0px;
+            text-align: justify;
+        }
+        .row {
+            column-count: 3;
+        }
+        h2 {
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+        .row > div {
+            border: 1px solid red;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Column Count</h1>
+
+    <div id="parent">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, quo inventore? Nisi corrupti ea placeat facilis ut. Sapiente consectetur ab et eligendi magnam ipsa quae tempora! Fuga quo est quae? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus fugit, quos provident vel dolor, facere esse earum asperiores quis deleniti inventore sint quaerat sed consequuntur neque aperiam commodi eos voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque hic reprehenderit quia similique nam nobis eos exercitationem aliquid natus expedita sit dignissimos, dolor nulla! Facilis hic laudantium illum reiciendis sunt!
+        </p>
+    </div>
+
+    <div class="row">
+        <div class="col-1">
+            <h2>Column_1</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, ea magnam minima voluptates incidunt, tempore, corporis alias vero nisi a error velit eligendi officia ut molestias ab perspiciatis eaque ducimus?
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti totam modi minus quis doloribus veniam sequi! Vitae magnam accusamus ad suscipit dignissimos illo deleniti nisi est repellat quod? Soluta, sapiente!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dolore porro delectus sunt unde, omnis consectetur incidunt quod accusamus aspernatur ipsam tenetur eligendi beatae. Corporis aliquid accusantium minima itaque repudiandae.
+            </p>
+        </div>
+        <div class="col-2">
+            <h2>Column_2</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, ea magnam minima voluptates incidunt, tempore, corporis alias vero nisi a error velit eligendi officia ut molestias ab perspiciatis eaque ducimus?
+            </p>
+        </div>
+        <div class="col-3">
+            <h2>Column_3</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, ea magnam minima voluptates incidunt, tempore, corporis alias vero nisi a error velit eligendi officia ut molestias ab perspiciatis eaque ducimus?
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
