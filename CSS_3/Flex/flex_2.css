@@ -1,0 +1,20 @@
+ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column-reverse; */
+}
+img {
+    width: 100%;
+}
+
+li {
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
