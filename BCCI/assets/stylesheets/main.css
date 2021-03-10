@@ -1,0 +1,84 @@
+/* Global CSS */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Helper Classes */
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clear:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.row {
+    display: flex;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+
+/* #container {
+
+} */
+
+/* .container {
+
+} */
+
+/* Generic CSS */
+#header {
+    background-color: #02B3FF;
+}
+#header .row {
+    justify-content: space-between;
+}
+#header .logo {
+    width: 10%;
+}
+#header .logo img {
+    width: 50%;
+    vertical-align: middle;
+}
+
+#main-navigation {
+
+}
+#main-navigation ul {
+    display: flex;
+}
+#main-navigation ul li a {
+    display: block;
+    padding: 30px 40px;
+}
+
+#banner {
+
+}
+
+#footer {
+
+}
+
+
+/* Specific CSS */
