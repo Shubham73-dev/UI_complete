@@ -1,0 +1,143 @@
+body {
+    margin: 0px;
+}
+@media(min-width: 1200px) {
+    body {
+        background-color: #e0e0e0;
+    }
+}
+
+/* @media(max-width: 1200px) {
+    body {
+        background-color: #a0a0a0;
+    }
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+}
+.logo {
+    width: 30%;
+}
+nav {
+    width: 60%;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.menu-btn {
+    position: absolute;
+    right: 50px;
+    top: 15px;
+    background-color: transparent;
+    border: none;
+    display: none;
+    pointer-events: none;
+}
+
+.menu-btn .line {
+    display: block;
+    height: 3px;
+    background-color: red;
+    width: 30px;
+    transition: 0.5s;
+    margin-bottom: 4px;
+}
+nav input[value="toggle-menu"] {
+    position: absolute;
+    right: 50px;
+    top: 12px;
+    width: 36px;
+    height: 20px;
+    opacity: 0;
+}
+
+@media(max-width:992px) {
+    h1 {
+        font-size: 24px;
+    }
+}
+@media(max-width:768px) {
+    .menu-btn {
+        display: block;
+    }
+    nav ul {
+        /* display: none; */
+        display: block;
+        position: absolute;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        background-color: rgba(0,0,0,0.5);
+        left: 0px;
+        top: 50px;
+        text-align: center;
+        transform: translateX(-100%);
+        transition: 1s;
+    }
+    nav ul li {
+        margin-bottom: 20px;
+    }
+    nav ul li a {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    .logo {
+        width: 100%;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    input[value='toggle-menu']:checked ~ ul {
+        /* display: block; */
+        transform: translateX(0%);
+    }
+    input[value='toggle-menu']:checked ~ .menu-btn .line:first-child {
+        transform: rotate(45deg);
+    }
+    input[value='toggle-menu']:checked ~ .menu-btn .line:last-child {
+        transform: rotate(-45deg);
+        margin-top: -14px;
+    }
+    input[value='toggle-menu']:checked ~ .menu-btn .line:nth-child(2) {
+        opacity: 0;
+    }
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.col {
+    background-color: red;
+    border: 1px solid black;
+    height: 200px;
+    width: 22%;
+    margin-bottom: 10px;
+}
+@media(max-width:992px) {
+    .col {
+        width: 32%;
+    }
+}
+
+@media(max-width:768px) {
+    .col {
+        width: 48%;
+    }
+}
+
+@media(max-width:576px) {
+    .col {
+        width: 98%;
+    }
+}
