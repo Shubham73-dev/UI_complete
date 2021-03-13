@@ -1,0 +1,56 @@
+.row {
+    display: grid;
+    grid-template-columns: 20% 45% 20%;
+    /* grid-template-columns: repeat(3, 1fr); */
+    justify-content: space-around;
+}
+
+.col {
+    border: 1px solid red;
+    background-color: lightgray;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+header {
+    display: grid;
+    grid-template-areas: "logo nav login"
+                         "logo search login" ;
+    justify-content: space-around;
+    grid-template-columns: 10% 70% 10%;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+.logo {
+    grid-area: logo;
+    width: 100%;
+    border: 1px solid red;
+}
+nav {
+    grid-area: nav;
+    border: 1px solid blue;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+nav ul li {
+    width: 20%;
+}
+.search {
+    grid-area: search;
+    border: 1px solid red;
+    margin-left: 10px;
+}
+.login {
+    grid-area: login;
+    border: 1px solid black;
+    padding: 10px;
+}
