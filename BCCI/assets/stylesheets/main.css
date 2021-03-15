@@ -37,14 +37,18 @@ ul {
     width: 100%;
 }
 
+.grid {
+    display: grid;
+}
 
 /* #container {
 
 } */
 
-/* .container {
-
-} */
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
 
 /* Generic CSS */
 #topbar {
@@ -137,17 +141,84 @@ ul {
 #main-navigation {
     width: 70%;
 }
-#main-navigation ul {
+#main-navigation > ul {
     display: flex;
 }
-#main-navigation ul li a {
+#main-navigation > ul > li {
+    position: relative;
+}
+#main-navigation > ul > li > a {
     display: block;
     font-weight: bold;
-    padding: 36px 35px;
+    padding: 37px 35px;
     text-transform: uppercase;
     color: #fff;
     font-size: 14px;
+    position: relative;
     letter-spacing: 2px;
+    overflow: hidden;
+}
+
+#main-navigation > ul > li:not(:last-child) > a::after {
+    content: "";
+    position: absolute;
+    border: 5px solid;
+    border-color: white transparent transparent;
+    top: 48%;
+}
+#main-navigation > ul > li:last-child a:after {
+    content: "";
+    position: absolute;
+    border-bottom: 7px solid #FB925B;
+    width: 100%;
+    bottom: -7px;
+    left: 0px;
+    transition: 0.5s;
+}
+#main-navigation > ul > li:last-child:hover a::after {
+    bottom: 0px;
+}
+
+#main-navigation ul li .dropdown {
+    position: absolute;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 8px 18px 0 rgb(0 0 0 / 25%);
+    padding: 0px 5px;
+    left: -25%;
+    /* width: calc(); */
+    width: 150%;
+    cursor: pointer;
+    top: 80%;
+    border-radius: 5px;
+    transform: scale(0,0);
+    transition: 0.5s;
+    transform-origin: top;
+}
+#main-navigation ul li .dropdown ul li a {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 10px;
+    display: block;
+    color: #6f788d;
+    font-weight: bold;
+    border-bottom: 1px solid #F8F8F8;
+}
+#main-navigation ul li .dropdown ul li:hover a {
+    background-color: #F8F8F8;
+}
+#main-navigation ul li .dropdown::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border: 10px solid;
+    border-color: transparent transparent white;
+    top: -20px;
+}
+#main-navigation ul li:hover .dropdown {
+    transform: scale(1,1);
 }
 
 #menu {
@@ -179,3 +250,24 @@ ul {
 
 
 /* Specific CSS */
+
+#section_1 {
+    padding: 20px 0px;
+    background: linear-gradient(260deg,#009bfe,#0a4199);
+}
+#section_1 .grid {
+    grid-template-columns: 25% 25% 25% 25%;
+}
+#section_1 img {
+    width: 100%;
+}
+#section_1 .col-1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#section_1 .col:not(.col-1) {
+    width: 92.5%;
+}
