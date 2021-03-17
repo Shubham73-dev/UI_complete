@@ -1,0 +1,40 @@
+Bootstrap
+= responsive web framework
+- twitter
+
+- Grid System
+- Container and Container-Fluid
+- Components
+  - Navbar
+  - forms
+  - tables
+  - breadcrumbs
+  - cards
+  - progress bar
+  - pagination
+
+
+Rules for grid system
+
+XXLarge		> 1400px	.col-xxl-*
+Extra Large	> 1200px	.col-xl-*
+Large		> 992px		.col-lg-*
+Medium		> 768px		.col-md-*
+Small		> 576px		.col-sm-*
+Extra Small	< 576px		.col-*
+
+<div class='row'>
+	<div class='col-lg-2'> </div>
+	<div class='col-lg-8'> </div>
+	<div class='col-lg-2'> </div>
+</div>
+
+
+
+
+
+
+
+
+
+
