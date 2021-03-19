@@ -1,0 +1,102 @@
+x = 12;
+12
+y = 43;
+43
+z = x + y;
+55
+z = x + y
+55
+z
+55
+typeof x
+"number"
+typeof y
+"number"
+typeof z
+"number"
+x = 'hello';
+"hello"
+typeof x
+"string"
+window
+Window {window: Window, self: Window, document: document, name: "", location: Location, …}
+window.document
+#document
+window.location
+Location {ancestorOrigins: DOMStringList, href: "about:blank", origin: "null", protocol: "about:", host: "", …}
+window.navigator
+Navigator {vendorSub: "", productSub: "20030107", vendor: "Google Inc.", maxTouchPoints: 0, userActivation: UserActivation, …}
+window.screen
+Screen {availWidth: 1280, availHeight: 680, width: 1280, height: 720, colorDepth: 24, …}
+document
+#document
+screen
+Screen {availWidth: 1280, availHeight: 680, width: 1280, height: 720, colorDepth: 24, …}
+navigator
+Navigator {vendorSub: "", productSub: "20030107", vendor: "Google Inc.", maxTouchPoints: 0, userActivation: UserActivation, …}
+x = '10'
+"10"
+typeof x
+"string"
+y  =10
+10
+x + y
+"1010"
+z = 10
+10
+z + y + x
+"2010"
+x * y
+100
+x - y
+0
+x / y
+1
+x = [4,34,2,5,67,7,2]
+(7) [4, 34, 2, 5, 67, 7, 2]
+typeof x
+"object"
+name = 'Ravi'
+"Ravi"
+name_1 = new String('Ravi');
+String {"Ravi"}
+name
+"Ravi"
+name_1
+String {"Ravi"}
+name == name_1
+true
+name === name_1
+false
+a = 10
+10
+b = "10"
+"10"
+typeof a
+"number"
+typeof b
+"string"
+a == b
+true
+a === b
+false
+name
+"Ravi"
+name_1
+String {"Ravi"}
+typeof name
+"string"
+typeof name_1
+"object"
+name instanceof String
+false
+String
+ƒ String() { [native code] }
+String instanceof Object
+true
+Object instanceof Function
+true
+Function inspect Object
+VM1233:1 Uncaught SyntaxError: Unexpected identifier
+Function instanceof Object
+true
