@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        #banner {
+            height: 500px;
+            border: 10px solid red;
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+        img {
+            width: 100%;
+        }
+        .row {
+            display: flex;
+        }
+        .col {
+            border: 5px solid;
+            padding: 20px;
+            margin: 10px;
+            transition: 1s;
+        }
+        #section_1 .col-1 {
+            transform: translateX(-200%);
+        }
+        #section_1 .col-2 {
+            opacity: 0;
+        }
+        #section_1 .col-3 {
+            transform: translateX(200%);
+        }
+        #section_1.animate .col {
+            transform: translateX(0%);
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Scroll Event</h1>
+
+    <div id="banner">
+        <img id="img" src="../../images/WebImages/Iron-Man-3-2013-Wallpaper.jpg" alt="">
+    </div>
+
+    <div id="content">
+        <section id="section_1">
+            <h2>This is section_1</h2>
+            <hr>
+            <div class="row">
+                <div class="col col-1">
+                    <img src="../../images/dhoni.jpg" alt="">
+                </div>
+                <div class="col col-2">
+                    <img src="../../images/dhoni.jpg" alt="">
+                </div>
+                <div class="col col-3">
+                    <img src="../../images/dhoni.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        window.addEventListener("scroll", getScrollPos);
+        var section = document.querySelector("#section_1");
+        var img = document.querySelector("#img");
+        function getScrollPos() {
+            
+            // console.log("You are scolling...");
+            var scroll_y = window.scrollY;
+            // if (scrollY > 30) {
+            //     img.style.transform = 'scale('+scrollY * 0.02,scrollY * 0.02+')';
+            // }
+            // console.log("Scrolled",scroll_y);
+            if(scrollY > 500) {
+                section.className = 'animate';
+            }
+            else {
+                section.className = "";
+            }
+        }
+    </script>
+</body>
+</html>

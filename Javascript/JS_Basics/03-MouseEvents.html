@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #banner {
+            height: 400px;
+            border: 10px solid red;
+            overflow: hidden;
+            position: relative;
+            background-image: url("../../images/WebImages/Iron-Man-3-2013-Wallpaper.jpg");
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        .fireworks {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            background-repeat: no-repeat;
+            background-size: 30% 70%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mouse Move</h1>
+
+    <div id="banner" onmousemove="animateImg(this)">
+        <div class="fireworks" onclick="showFirework(this)"></div>
+    </div>
+    
+    <script>
+        function animateImg(obj) {
+            // console.log(obj, event);
+            var mouseX = event.clientX;
+            var mouseY = event.clientY;
+            // console.log(mouseX, mouseY);
+            obj.style.backgroundPositionX = -mouseX * 0.5+"px";
+            obj.style.backgroundPositionY = -mouseY * 0.5+"px";
+        }
+
+        function showFirework(obj) {
+            // var img = document.createElement('img');
+            // alert("Firework started...");
+            obj.style.backgroundImage = 'url("https://i.gifer.com/VZvx.gif")';
+            var mouseX = event.clientX;
+            var mouseY = event.clientY;
+            var height = obj.offsetHeight;
+            var width = obj.offsetWidth;
+            console.log(height, width);
+            obj.style.backgroundPositionX = mouseX - width / 5 +"px";
+            obj.style.backgroundPositionY = mouseY - height / 2+"px";
+        }
+    </script>
+</body>
+</html>

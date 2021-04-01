@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 400px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mouse Events</h1>
+
+    <div onmouseover="changeImage()" onmouseout="changeImage2()">
+        <img src="../../images/hulk5-18463.gif" alt="" id="img">
+        <!-- <img src="../../images/hulk-bigpunch.gif" alt=""> -->
+    </div>
+
+    <script>
+        function changeImage() {
+            document.querySelector("img").src = "../../images/hulk-bigpunch.gif";
+        }
+
+        function changeImage2() {
+            document.querySelector("img").src = "../../images/hulk5-18463.gif";
+        }
+    </script>
+    
+</body>
+</html>
