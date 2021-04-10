@@ -11,6 +11,7 @@ function initEvents() {
     togglePlay = document.querySelector('#toggle-play');
     document.querySelector('#stopSong').addEventListener('click', stopSong);
     loadAllSongs();
+    loadPlaylist();
 }
 
 function loadAllSongs() {
@@ -47,6 +48,7 @@ function playSong() {
     for(var i = 0; i < songs.length; i++) {
         if (song_id == songs[i].song_id) {
             var song_url = songs[i].song_url;
+            current_song_idx = i;
             break
         }
     }
@@ -96,10 +98,65 @@ function add_to_playlist() {
 }
 
 function showPlaylist() {
+    var ul = document.querySelector("#playlist");
+    ul.innerHTML = "";
+    playlist_obj.my_playlist.forEach(function(obj) {
+        var li = document.createElement("li");
+        var h5 = document.createElement('h5');
+        var img = document.createElement("img");
+        var delete_btn = document.createElement("button");
+        var play_btn = document.createElement("button");
+        delete_btn.className = 'btn btn-danger playlist_btn';
+        play_btn.className = 'btn btn-primary play_btn';
+        h5.innerHTML = obj.name;
+        img.src = obj.thumbnail;
+        delete_btn.innerHTML = '<i class="fas fa-trash">';
+        play_btn.innerHTML = '<i class="fas fa-play">';
+        play_btn.setAttribute('title', obj.id);
+        delete_btn.setAttribute('title', obj.id);
 
+        li.appendChild(img);
+        li.appendChild(h5);
+        li.appendChild(play_btn);
+        li.appendChild(delete_btn);
+
+        ul.appendChild(li);
+        play_btn.addEventListener("click", playSong);
+        delete_btn.addEventListener('click', deleteSong);
+    });
+    savePlaylist();
 }
 
 function seekSong() {
     audio.currentTime = this.value / 100 * audio.duration;
     // console.log(audio.currentTime);
+}
+
+function deleteSong() {
+    var song_id = this.title;
+    playlist_obj.deleteSong(song_id);
+    showPlaylist();
+}
+
+function savePlaylist() {
+    if(window.localStorage) {
+        var data = JSON.stringify(playlist_obj.my_playlist);
+        localStorage.setItem('data', data);
+    }
+    else {
+        alert("Localstorage not supported...")
+    }
+}
+
+function loadPlaylist() {
+    if(window.localStorage) {
+        if(localStorage.data) {
+            var data = localStorage.getItem('data');
+            playlist_obj.my_playlist = JSON.parse(data);
+            showPlaylist();
+        }
+    }
+    else {
+        alert("Localstorage not supported...")
+    }
 }
