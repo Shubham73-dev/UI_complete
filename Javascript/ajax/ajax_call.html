@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>AJAX Call</h1>
+
+    <button onclick="load()">Load News</button>
+
+    <div id="data"></div>
+
+    <script>
+        function load() {
+            var xhttp = new XMLHttpRequest();
+            var div = document.querySelector('#data')
+            xhttp.onreadystatechange = function() {
+                // console.log(this.readyState, this.status);
+                if(this.readyState == 4 && this.status == 200) {
+                    data = this.responseText;
+                    data = JSON.parse(data);
+                    var title = document.createElement('h4');
+                    title.innerHTML = data.fullName;
+                    var img = document.createElement('img');
+                    img.src = data.imageURL;
+                    div.appendChild(title);
+                    div.appendChild(img);
+                }
+            }
+            xhttp.open('get', 'https://cricapi.com/api/playerStats?apikey=b7CYzlyYOrUCIIdbSlU753oGKN12&pid=35320');
+            xhttp.send()
+        }
+    </script>
+</body>
+</html>

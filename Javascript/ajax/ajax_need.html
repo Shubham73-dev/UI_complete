@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>AJAX Need</h1>
+
+    <button onclick="start_job()">Start Job</button>
+    
+    <script>
+        function start_job() {
+            one();
+            two();
+            three();
+            four();
+        }
+        function one() {
+            console.log("Function One Executed...");
+        }
+        function two() {
+            var j = 0;
+            for(var i = 0; i < 1000000000; i++) {
+                j += 1;
+            }
+            console.log("Function Two Executed...");
+        }
+        function three() {
+            console.log("Function Three Executed...");
+        }
+        function four() {
+            console.log("Function Four Executed...");
+        }
+    </script>
+</body>
+</html>
